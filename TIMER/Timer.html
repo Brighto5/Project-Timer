@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <div class="sticky">></Give-Away></div>
+
+    <style>
+        div{
+            text-align: center;
+            text-decoration: underline;
+            color: white;
+            padding: 35px;
+            overflow: hidden;
+            background-color: black;
+            font-size: 50px;
+        }
+        div.sticky{
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            padding: 5px;
+            border: 10px steelblue;
+        }
+        img{
+            float:top ;
+        }
+    </style>
+</head>
+<body>
+    
+    <h2 style="text-align: right;">Don't Miss Out On This Give-Away</h2>
+    <h2 style="text-align: ;">Get A New XIAOMI 13 PRO</h2>
+    <h2>IT'S A LIMITED OFFER</h2>
+    <style>
+        body{
+
+
+        }
+        h2{
+            color: blue;
+            font-size: 30px;
+            padding-left: 23px;
+            font-family: cursive;
+            font-weight: bold;
+        }
+    </style>
+    <img src="./images/xiaomi.png" alt="" width="400" height="400">
+    <style>
+        .countdown-box {
+            display:inline-block;
+            margin:0 10px;
+            padding: 10px;
+            border: 1px solid darkgreen;
+            border-radius: 5px;
+            color: blue;
+        }
+    </style>
+    <a href="mailto:akinneyebright18@gmail.com">Register</a>
+</body>
+
+<div id="countdown"></div>
+<script>
+    function startCountdown() {
+      // Set the date for 10 days from now
+      var endDate = new Date();
+      endDate.setDate(endDate.getDate() + 10);
+    
+      // Update the countdown every second
+      var countdown = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = endDate - now;
+    
+        // Calculate days, hours, minutes, and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+        // Display the countdown
+        document.getElementById("countdown").innerHTML = "Countdown: " + days + "d " + hours + "h "
+        + minutes + "m " + seconds + "s ";
+    
+        // If the countdown is over, restart it
+        if (distance < 0) { 
+          clearInterval(countdown);
+          document.getElementById("countdown").innerHTML = "EXPIRED";
+          startCountdown(); // Restart the countdown
+         v}
+      }, 1000);
+    }
+    
+    // Start the countdown initially
+    startCountdown();
+    </script>
+
+
+
+</html>
